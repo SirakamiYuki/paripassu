@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./css/dl.css" type="text/css">
+  <title>ぱりぱすダウンロードページ</title>
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+body {
+  font: 1.4em/2 "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  height: 100%;
+  color: #839999;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  letter-spacing: 2px;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: none;
+}
+a {
+  font-size: 20px;
+  color: #3434f0;
+}
+/* 重要 */
+strong {
+  font-weight: bold;
+}
+/* 強調 */
+em {
+  background-color: #fdeeea;
+  padding: 3px 5px;
+  font-style: normal;
+}
+
+/* 水平線 */
+hr {
+  margin: 10px 0;
+  border: 1px solid #ccc;
+}
+h1 {
+  font: 2.3em 'Quicksand', sans-serif;
+  line-height: 1;
+  letter-spacing: 5px;
+  background: 50% 100%/0% 100% no-repeat radial-gradient(ellipse at bottom, #3d6697, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: ellipse 2s ease-in-out forwards 300ms;
+  position: relative;
+}
+h1::before {
+  position: absolute;
+  content: attr(data-text);
+  top: 30px;
+  left: -12px;
+  background: linear-gradient(to top, #3d6697 0%, #fff 100%);
+  color: transparent;
+  transform: rotateX(200deg) skew(228deg);
+  animation: fade 2.5s ease-in-out forwards 500ms;
+  opacity: 0;
+}
+h2 {
+  font-size: 1.3em;
+  color: #fff;
+  text-shadow: 0 0 5px #537399;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}
+h3 {
+  font-size: 1.7em;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+h3::before, h3::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: #D8DADB;
+}
+h3::before {
+  margin-right: 20px;
+}
+h3::after {
+  margin-left: 20px;
+}
+h4 {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 0 6px;
+  width: fit-content;
+  color: #6B7CA2;
+  background-color: #C8D9F1;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, .07) 50%, transparent 50%), linear-gradient(90deg, rgba(255, 255, 255, .13) 50%, transparent 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .17) 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .19) 50%);
+  background-size: 13px, 29px, 37px, 53px;
+}
+@keyframes ellipse {
+  0% {
+    background-size: 10% 10%;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@keyframes fade2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+header {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shadow-1 .shadow-inner-1 {
+  overflow: hidden;
+  height: 20px;
+  margin-top: 20px
+}
+.shadow-1 .shadow-inner-1::before {
+  content: '';
+  display: block;
+  margin: 20px auto 0;
+  width: calc(100% - 50px);
+  height: 20px;
+  border-radius: 125px/12px;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.20);
+}
+.shadow-1 .top {
+width: 90px;
+height: 70px;
+position: absolute;
+bottom: 100%;
+margin-bottom: -70px;
+border-radius: 100%;
+}
+.shadow-1 img {
+  width: 390px;
+  height: auto;
+  position: absolute;
+  margin-top: 50px;
+  right: -550px;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.40));
+}
+.shadow-2 .top {
+width: 90px;
+height: 70px;
+position: absolute;
+bottom: 100%;
+margin-bottom: -70px;
+border-radius: 100%;
+}
+.shadow-2 img {
+  width: 390px;
+  height: auto;
+  position: absolute;
+  margin-top: 50px;
+  right: -950px;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.40));
+}
+
+.sub {
+  position: absolute;
+  top: -31px;
+  font-size: 30px;
+  animation: fade2 3s ease-in-out forwards 600ms;
+  color: #1b3d50;
+  opacity: 0;
+	  }
+.sub a {
+  background: linear-gradient(rgba(255, 250, 250, 0) 70%, rgba(248, 249, 255, 0.3) 30%);
+
+}
+/* 装飾BOX背景　名前変換背景 */
+.box, .name_change {
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  width: 100%;
+  max-height: 100%;
+  position: relative;
+  background: #C8D9F1;/*-- この背景色を変更するとボックスのグラデーションカラーも変わります --*/
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, .07) 50%, transparent 50%), linear-gradient(90deg, rgba(255, 255, 255, .13) 50%, transparent 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .17) 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .19) 50%);
+  background-size: 13px, 29px, 37px, 53px;
+}
+/* 装飾BOX */
+.box-inner {
+  text-align: left;
+  max-width: calc(600px - 40px);
+  margin: 20px auto;
+  padding: 20px 30px;
+  background: radial-gradient(circle 20px, #0000 99%, rgba(255, 255, 255, 0.66)) 10000% 10000%/99.5% 99.5%;
+}
+.name_change::before, .name_change::after, .box::before, .box::after {
+  content: "";
+  background: rgba(255, 255, 255, 0.66);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 8px;
+}
+.name_change::before, .box::before {
+  top: 10px;
+}
+.name_change::after, .box::after {
+  bottom: 10px;
+}
+.name_change input[type="text"] {
+  width: 160px;
+}
+.name_change input[type="submit"], .name_change input[type="reset"] {
+  width: 70px;
+  font-size: .9em;
+}
+input[type="text"], input[type="submit"], input[type="reset"], textarea, button {
+  font-family: inherit;
+  font-size: 100%;
+  height: initial;
+  width: 100%;
+  margin-bottom: 15px;
+  color: #B1B7B8;
+  padding: 5px;
+  border: 1px solid;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  font-weight: normal;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.70);
+}
+input::placeholder, textarea::placeholder {
+  font-size: .9em;
+  color: rgba(89, 73, 66, 0.40);
+}
+input:focus, textarea:focus {
+  outline: none;
+}
+
+section {
+  max-width: 600px;
+  max-height: 100%;
+  margin: 40px auto 0;
+  padding: 0px 20px;
+}
+/* メインコンテンツ内リンクカラー */
+section a {
+  background: linear-gradient(rgba(0, 0, 0, 0.00) 70%, rgba(196, 205, 255, 0.22) 30%);
+}
+ol {
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+  columns: 2 auto;
+  width: 100%;
+  padding: 15px;
+  column-gap: 40px;
+}
+ol li {
+  margin: 0 0 10px 15px;
+  text-indent: -2.2em;
+}
+/* 展示リスト 横並び */
+.list_inline {
+  padding: 15px 0;
+}
+.list_inline li {
+  display: inline;
+  line-height: 2.3;
+}
+.list_inline li:not(:last-child):after {
+  content: "/";
+  padding-left: 6px;
+}
+.list_block {
+  padding: 15px 0;
+}
+.list_block dt {
+  display: inline-block;
+  color: #6B7CA2;
+  background-color: #C8D9F1;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, .07) 50%, transparent 50%), linear-gradient(90deg, rgba(255, 255, 255, .13) 50%, transparent 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .17) 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .19) 50%);
+  background-size: 13px, 29px, 37px, 53px;
+  padding: 0 6px;
+}
+.list_block dd {
+  margin: 0 5px 0 10px;
+  padding: 20px 0 20px 8px;
+  border-left: 1px solid #ccc;
+}
+.list_block dd a {
+  padding: 0 3px;
+  margin-right: 10px;
+}
+.footer {
+  padding: 10px 0;
+  text-align: center;
+}
+.footer li {
+  list-style: none;
+}
+.footer li a {
+  padding: 0 5px;
+}
+
+/* メディアクエリ */
+@media (orientation: landscape) and (max-width: 823px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h1::before {
+    top: 29px;
+    left: -6px;
+    font-size: .9em;
+    letter-spacing: 6px;
+  }
+}
+@media screen and (min-width:768px) and (max-width:820px) {
+  body {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width:428px) {
+  body {
+    font-size: 1.3em;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h1::before {
+    top: 25px;
+    left: -6px;
+    font-size: .9em;
+    letter-spacing: 6px;
+  }
+	h3 {
+		margin: 0 calc(50% - 50vw) 30px;
+	}
+  ol {
+    columns: 1 auto;
+  }
+.name_change input[type="text"]{
+    font-size: 16px;
+    margin: 15px auto;
+    display: block;
+  }
+  .name_change br {
+    display: none;
+  }
+}
+</style>
+
+		  
+</head>
+
+<body>
+  <div class="shadow-1">
+    <div class="shadow-inner-1"></div>
+    <div class="top"><img src="./images/page.jpg"></div>
+  </div>
+  <div class="shadow-2">
+    <div class="shadow-inner-2"></div>
+    <div class="top"><img src="./images/gaimg.jpg"></div>
+  </div>
+  <header>
+    <h3 class="sub">paripassu -ぱりぱす-  ダウンロードページ</h3>
+  </header>
+  <div class="shadow-2">
+    <div class="shadow-inner-2"></div>
+  </div>
+  <form class="name_change">
+    <h2>ダウンロード</h2>
+    <a href="https://d.kuku.lu/frswzrr8t">paripassu-ぱりぱす-【暫定版】.zip</a>
+
+    <div class="box-inner"> 
+      注意！<br>
+      ダウンロードしたzipファイルは必ずデスクトップに移動してから解凍(展開)してください。
+    </div>
+  </div>
+</form>     
+</body>
+
+</html>
