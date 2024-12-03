@@ -7,30 +7,23 @@
   <link rel="stylesheet" href="./css/dl.css" type="text/css">
   <title>ぱりぱすダウンロードページ</title>
 <style>
-img{
-width: 40%;
-height: auto;
-position: absolute;
-margin-top: 5%;
 
-}
-.top_left{
-  margin-left: 10%;
-}
-.top_right{
-  margin-left: 50%;
-}
 .text{
   text-align: center;
   position: relative;
-  font-size: 150%;
-  border-bottom: solid 5px rgb(0, 0, 0);
+  font-size: 2.5vw;
+  border-bottom: solid 1.0vw rgb(0, 0, 0);
+width: 100%;
+margin-right:auto;
+margin-left:auto;
 }
 .dltext{
-  margin-top: 35%;
+margin-right:auto;
+margin-left:auto;
+  margin-top: 43%;
   position: relative;
-  font-size: 160%;
-  border: double 4px greenyellow;
+  font-size: 4.6vw;
+  border: double 0.4vw greenyellow;
   background-color: rgba(215, 255, 70, 0.612);
 }
 .dl{
@@ -44,7 +37,9 @@ a {
 }
 h2 {
   text-align: center;
-
+width: 80%;
+margin-right: auto;
+margin-left: auto;
   font-size: 1.3em;
   color: #fff;
   text-shadow: 0 0 5px #537399;
@@ -65,16 +60,78 @@ h2 {
   body{
     background-color: #e7effac8;
   }
+  .Container {
+    position: absolute;
+      margin-top: 5%;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .Box-Container {
+      display: flex;
+      width: fit-content;
+      transition: transform 0.3s ease;
+      transform: translateX(0);
+    }
+
+    .Box {
+      flex-shrink: 0;
+      
+margin-top: 1.5%;
+      width: 50%;
+      height: auto;
+      border-radius: 10px;
+      background-color: #ccc;
+
+    }
+
+    .Arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.475);
+      border:double 2px rgba(255, 255, 255, 0.750);
+      color: #fff;
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .Arrow.left {
+      left: 0;
+    }
+
+    .Arrow.right {
+      right: 0;
+    }
+
+    .Hide {
+      display: none;
+    }
 </style>
 
 		  
 </head>
 
 <body>
-    <div class="top_left"><img src="./images/titlescr.jpg"></div>
+  <div class="Container">
+    <div class="Box-Container">
+      <img class="Box" src="./images/titlescr.jpg">
+      <img class="Box" src="./images/gaimg1.jpg">
+      <img class="Box" src="./images/gaimg2.jpg">      
+      <img class="Box" src="./images/gaimg3.jpg">
+    </div>
+      <!-- 必要な数の.Box要素を追加 -->
+    </div>
+    <div class="Arrow left"><</div>
+    <div class="Arrow right">></div>
   </div>
-    <div class="top_right"><img src="./images/gaimg.jpg"></div>
-  </div>
+    
   <header>
     <h3 class="text">paripassu -ぱりぱす-  ダウンロードページ</h3>
   </header>
@@ -90,6 +147,8 @@ h2 {
     </div>
   </div>
 </form>     
+<script src="./js/DL.js"></script>
 </body>
 
 </html>
+
