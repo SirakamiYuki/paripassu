@@ -1,149 +1,12 @@
 <!DOCTYPE html>
 <html>
-
+  
 <head>
   <link rel="icon" href="./images/pp.ico">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="./css/dl.css" type="text/css">
   <title>ぱりぱすダウンロードページ</title>
-<style>
-#rogo {
-top: -6px;
-position: absolute;
-width: 14%;
-
-}
-.text{
-
-  text-align: center;
-  position: relative;
-  font-size: 2.5vw;
-  border-bottom: solid 1.0vw rgb(0, 0, 0);
-width: 100%;
-margin-right:auto;
-margin-left:auto;
-}
-.dltext{
-
-margin-right:auto;
-margin-left:auto;
-  margin-top: 43%;
-  position: relative;
-  font-size: 2.5vw;
-  border: double 0.4vw greenyellow;
-  background-color: rgba(215, 255, 70, 0.5);
-padding: 8px 10px;
-}
-.dl{
-  text-align: center;
-}
-.tyuuigaki {
-
-  font-size: 1.5vw;
-
-}
-.tyuui {
-margin-top: 0.1%;
-  font-size: 2.0vw;
-color:red;
-}
-.tyuui h3{
-
-margin-bottom: 0;
-  font-size: 2.5vw;
-color:red;
-}
-p{
-margin-top: 0;
-  font-size: 2.0vw;
-}
-a {
-  left: 10px;
-  font-size: 3vw;
-  color: #3434f0;
-}
-h2 {
-
-  text-align: center;
-width: 88%;
-margin-right: auto;
-margin-left: auto;
-  font-size: 1.1vw;
-  color: #fff;
-  text-shadow: 0 0 5px #537399;
-  margin-bottom: 10px;
-  padding: 8px 10px;
-
-}
-.sub {
-  position: absolute;
-  top: -31px;
-  font-size: 30px;
-  animation: fade2 3s ease-in-out forwards 600ms;
-  color: #1b3d50;
-  opacity: 0;
-	}
-  body{
-    background-color: #e7effac8;
-  }
-  .Container {
-    position: absolute;
-      margin-top: 5%;
-      width: 100%;
-      height: auto;
-      overflow: hidden;
-    }
-
-    .Box-Container {
-      display: flex;
-      width: fit-content;
-      transition: transform 0.3s ease;
-      transform: translateX(0);
-    }
-
-    .Box {
-      flex-shrink: 0;
-      
-margin-top: 1.5%;
-      width: 50%;
-      height: auto;
-      background-color: #ccc;
-
-    }
-
-    .Arrow {
-      position: absolute;
-
-      margin-top:21.5%;
-      margin-bottom:auto;
-      padding:0.8%;
-      width: 7%;
-      height: auto;
-      background-color: rgba(0, 0, 0, 0.475);
-      border:double 2px rgba(255, 255, 255, 0.750);
-      color: #fff;
-      font-size: 2.5vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    .Arrow.left {
-      left: 14px;
-    }
-
-    .Arrow.right {
-      right: 0%;
-    }
-
-    .Hide {
-      display: none;
-    }
-</style>
-
-		  
+  <link rel="stylesheet" href="./css/DL.css">
 </head>
 
 <body>
@@ -160,16 +23,20 @@ margin-top: 1.5%;
     <div class="Arrow right">></div>
   </div>
     
-  <header>
-	  <img id="rogo" src="./images/titlerogo.png">
-    <h3 class="text">paripassu -ぱりぱす-  ダウンロードページ</h3>
+
+    <header class="site-header">
+          
+        <h3 class="text">paripassu -ぱりぱす-  ダウンロードページ</h3>
+          
+  </header>
+	  <img id="logo" src="./images/titlerogo.png">
+    
   </header>
   <div class="dl">
     <div class="box">
-    <h2 class="dltext">ダウンロード</h2>
+    <h2 class="dltext">ダウンロードリンク</h2>
     <a href="https://ocsjoho-my.sharepoint.com/:u:/g/personal/214084_ocsjoho_onmicrosoft_com/EVp4WOh3RmxPhSkDf6HdQkUBiKUOY48hICmoj9mPL5yM8g?e=XgfJM6&download=1">paripassu-ぱりぱす-【暫定版】.zip</a>　
 <br><p>↑ココをクリックしてダウンロード！</p>
-
     
 <div class="tyuui"> 
       <h3>注意！</h3>
@@ -184,5 +51,4 @@ margin-top: 1.5%;
 </form>     
 <script src="./js/DL.js"></script>
 </body>
-
 </html>
